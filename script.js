@@ -28,9 +28,10 @@ fileInput.addEventListener('change',function(e){ //여기서부터 실행
     }
     button.style.display = "none";
     console.log(String(reader.onload.imageURL));
+
     $.ajax({
       url:"https://dapi.kakao.com/v2/vision/face/detect.json?image="+`${imageURL}`,
-      type:'post',
+      type:'POST',
       headers: {'Authorization' : "KakaoAK c53c3352cd6569d7e71cea47f59d46ca"}
     })
 })
