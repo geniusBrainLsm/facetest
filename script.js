@@ -30,7 +30,7 @@ fileInput.addEventListener('change',function(e){ //여기서부터 실행
     console.log(String(reader.onload.imageURL));
 
     $.ajax({
-      url:"https://dapi.kakao.com/v2/vision/face/detect.json?image="+`${imageURL}`,
+      url:"https://dapi.kakao.com/v2/vision/face/detect.json?image="+imageURL,
       type:'POST',
       headers: {'Authorization' : "KakaoAK c53c3352cd6569d7e71cea47f59d46ca"}
     })
